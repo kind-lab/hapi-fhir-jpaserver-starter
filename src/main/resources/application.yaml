@@ -33,6 +33,8 @@ spring:
   batch:
     job:
       enabled: false
+user:
+  global_permissions: ROLE_FHIR_CLIENT, FHIR_EVERYTHING
 hapi:
   fhir:
     ### This enables the swagger-ui at /fhir/swagger-ui/index.html as well as the /fhir/api-docs (see https://hapifhir.io/hapi-fhir/docs/server_plain/openapi.html)
@@ -54,9 +56,9 @@ hapi:
       #  name: hl7.fhir.us.core
       #  version: 4.0.0        
       mimic:    
-        url: "https://github.com/kind-lab/fhir-packages/raw/mimic-package-0.1.0/mimic-0.1.6.tgz"
-        name: mit.fhir.mimic
-        version: 0.1.6
+        url: "https://github.com/kind-lab/fhir-packages/raw/mimic-package-0.1.0/mimic-0.1.7.tgz"
+        name: kindlab.fhir.mimic
+        version: 0.1.7
 ###    example from registry (packages.fhir.org)
 #      swiss:
 #        name: swiss.mednet.fhir
@@ -69,24 +71,24 @@ hapi:
 #    supported_resource_types:
 #      - Patient
 #      - Observation
-#    allow_cascading_deletes: true
+    allow_cascading_deletes: true
 #    allow_contains_searches: true
 #    allow_external_references: true
-#    allow_multiple_delete: true
+    allow_multiple_delete: true
 #    allow_override_default_search_params: true
 #    auto_create_placeholder_reference_targets: false
 #    cql_enabled: true
 #    default_encoding: JSON
 #    default_pretty_print: true
 #    default_page_size: 20
-#    delete_expunge_enabled: true
+    delete_expunge_enabled: true
 #    enable_repository_validating_interceptor: false
 #    enable_index_missing_fields: false
 #    enable_index_contained_resource: false
-#    enforce_referential_integrity_on_delete: false
+    enforce_referential_integrity_on_delete: True
 #    enforce_referential_integrity_on_write: false
 #    etag_support_enabled: true
-#    expunge_enabled: true
+    expunge_enabled: true
 #    daoconfig_client_id_strategy: null
 #    client_id_strategy: ALPHANUMERIC
 #    fhirpath_interceptor_enabled: false
