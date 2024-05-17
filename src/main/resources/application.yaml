@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: 'jdbc:postgresql://localhost:5432/hapi_r4'
+    url: 'jdbc:postgresql://localhost:5432/b2ai'
     username: postgres
     password: postgres
     driverClassName: org.postgresql.Driver
@@ -55,10 +55,10 @@ hapi:
       #us-core:
       #  name: hl7.fhir.us.core
       #  version: 4.0.0        
-      mimic:    
-        url: "https://github.com/kind-lab/fhir-packages/raw/mimic-package-0.1.0/mimic-0.1.7.tgz"
-        name: kindlab.fhir.mimic
-        version: 0.1.7
+      vbai.r4:    
+        url: "https://github.com/kind-lab/kind-lab.github.io/raw/main/vbai-fhir/package.r4.tgz"
+        name: kindlab.fhir.vbai.r4
+        version: 2.2.0
 ###    example from registry (packages.fhir.org)
 #      swiss:
 #        name: swiss.mednet.fhir
